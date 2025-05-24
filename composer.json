@@ -1,0 +1,18 @@
+{
+    "name": "bibo/logger",
+    "description": "Logger class",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Bibo\\Logger\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "biboletin",
+            "email": "shady_fan@abv.bg"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
