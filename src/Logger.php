@@ -82,7 +82,7 @@ class Logger implements LoggerInterface
     {
         $interpolated = $this->interpolate($message, $context);
         $formattedMessage = $this->formatter->format($level, $interpolated, $context);
-    
+
         $this->handler->write($formattedMessage);
     }
 

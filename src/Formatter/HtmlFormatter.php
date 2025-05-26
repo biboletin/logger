@@ -7,7 +7,7 @@ namespace Bibo\Logger\Formatter;
  *
  * It includes a timestamp, log level, message, and optional context.
  * The output is suitable for rendering in a web browser.
- * 
+ *
  * .log-entry { margin-bottom: 1em; font-family: monospace; padding: 0.5em; border: 1px solid #ccc; }
  * .log-info { background-color: #e7f4e4; }
  * .log-error { background-color: #fbeaea; }
@@ -31,7 +31,9 @@ class HtmlFormatter implements FormatterInterface
         $message = htmlspecialchars((string) $message, ENT_QUOTES, 'UTF-8');
         $contextJson = !empty($context)
             ? '<pre class="log-context">' . htmlspecialchars(
-                json_encode($context, JSON_PRETTY_PRINT), ENT_QUOTES, 'UTF-8'
+                json_encode($context, JSON_PRETTY_PRINT),
+                ENT_QUOTES,
+                'UTF-8'
             ) . '</pre>'
             : '';
 
