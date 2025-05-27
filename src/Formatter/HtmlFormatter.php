@@ -2,6 +2,8 @@
 
 namespace Bibo\Logger\Formatter;
 
+use Bibo\Logger\Interfaces\FormatterInterface;
+
 /**
  * HtmlFormatter formats log entries as HTML.
  *
@@ -17,8 +19,26 @@ namespace Bibo\Logger\Formatter;
  */
 class HtmlFormatter implements FormatterInterface
 {
+    /**
+     * The date format for the timestamp in the log message.
+     * This format is used to display the date and time when the log entry was created.
+     * It follows the PHP date format conventions.
+     * For example, \DateTime::ATOM will output the date in the format "2023-10-01T12:34:56+00:00".
+     * This property can be customized when creating an instance of the HtmlFormatter.
+     *
+     * @var string
+     */
     protected string $dateFormat;
 
+    /**
+     * HtmlFormatter constructor.
+     * Initializes the formatter with a specific date format.
+     * This constructor allows you to specify how the log messages should be formatted,
+     * including the date format for the timestamp.
+     * This is useful for customizing the output of log messages to suit your needs.
+     *
+     * @param string $dateFormat The date format to use for timestamps.
+     */
     public function __construct(string $dateFormat = \DateTime::ATOM)
     {
         $this->dateFormat = $dateFormat;
