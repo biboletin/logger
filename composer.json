@@ -14,8 +14,14 @@
         }
     ],
     "minimum-stability": "dev",
+    "require-dev": {
+        "symfony/var-dumper": "7.3.x-dev",
+        "squizlabs/php_codesniffer": "*",
+        "phpstan/phpstan": "2.1.x-dev",
+        "vimeo/psalm": "^7.0@dev",
+        "phpunit/phpunit": "^12"
+    },
     "require": {
-        "psr/log": "^3.0@dev",
-        "symfony/var-dumper": "7.3.x-dev"
+        "psr/log": "^3.0@dev"
     }
 }
