@@ -1,5 +1,5 @@
 {
-    "name": "bibo/logger",
+    "name": "biboletin/logger",
     "description": "Logger class",
     "type": "library",
     "autoload": {
